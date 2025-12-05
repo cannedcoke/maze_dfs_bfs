@@ -1,0 +1,5 @@
+bool resolver(){
+    if(valid){
+        
+    }
+}

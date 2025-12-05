@@ -7,7 +7,7 @@
 // el tamaño dede poder cambiarse por teclado
 
 /* The line `using namespace std;` is a directive that tells the compiler to use the `std` namespace for the standard C++ library. This allows you to use standard C++ library functions and objects without having to prefix them with `std::`. It makes your code cleaner and easier to read. */
-#include <string>
+// #include <string>
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -26,7 +26,9 @@ const int DY[] = {1,-1,0,0};
 class mazeGenerator{
 private:
     int n,m;
+    /* The line `vector<vector<char>> maze;` is declaring a 2D vector named `maze` that stores characters (`char`) in C++. This vector will be used to represent the maze structure where each cell can contain a character value such as a wall (`#`), empty space (` `), start point (`x`), or end point (`x`). The 2D vector `maze` will hold the layout of the maze with its dimensions defined by the number of rows and columns specified during the maze generation process. */
     vector<vector<char>> maze;
+    /* The line `mt19937 random;` is declaring an instance of the Mersenne Twister pseudo-random number generator engine called `random`. This engine is used to generate random numbers in C++. The `mt19937` engine is a specific implementation of the Mersenne Twister algorithm, which is known for its high-quality random number generation capabilities. By creating an object of type `mt19937`, you can use it to generate random numbers within your program. */
     mt19937 random;
 
 public:
@@ -53,7 +55,7 @@ public:
         for (int i = 0; i < n ; i++){
             for (int j = 0; j < m; j++){
                         if (maze[i][j] == WALL) {
-                            cout << "██";      // print a wall
+                            cout << "██";      // replacing the # for the ascii thingi
                       } else {
                             cout << maze[i][j] << " ";   // print the value
                         }
@@ -91,6 +93,8 @@ private:
         }
 
     }
+
+
 };
 
 int main(){
